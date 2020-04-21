@@ -2,13 +2,14 @@
   <div class="main-block">
 
     <input class="input-character-search" v-model="characterSearch" type="text" placeholder="Search for any character or class.">
-    <div v-bind:key="character.id" v-for="character in charactersList">
-      <div v-show="evaluateCharacterSearch(characterSearch, character.name)">
-        <p>{{ character.name }}</p>
-        <img class="character-image" v-bind:alt="character.alt" v-bind:src="'./assets/' + character.image">
+    <div class="characters">
+      <div v-bind:key="character.id" v-for="character in charactersList">
+        <div class="character-card" v-show="evaluateCharacterSearch(characterSearch, character.name)">
+          <p>{{ character.name }}</p>
+          <img class="character-image" v-bind:alt="character.alt" v-bind:src="'./assets/' + character.image">
+        </div>
       </div>
     </div>
-    <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
   </div>
 </template>
 
@@ -18,12 +19,12 @@ import Characters from '../../public/assets/data/characters.json'
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String,
-    characterSearch: String
+    msg: String
   },
   data(){
     return{
-      charactersList: Characters
+      charactersList: Characters,
+      characterSearch: ''
     }
   },
   methods:{
@@ -74,6 +75,10 @@ a {
     border-left: transparent;
     border-top: transparent;
     border-right: transparent;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
 }
 .input-character-search:hover,
 .input-character-search:focus{
@@ -84,8 +89,24 @@ a {
   color: white;
 }
 
+.characters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.character-card{
+  display: inline-block;
+  border: 1px solid black;
+  margin: 20px 50px;
+  min-width: 270px;
+  box-shadow: 0px 0px 45px 10px rgba(0, 0, 0, 0.2);
+}
+
 .character-image{
-  max-width: 200px;
+  max-height: 200px;
+  width: auto;
 }
 
 </style>
