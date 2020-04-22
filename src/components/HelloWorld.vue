@@ -17,14 +17,14 @@
         <div class="col-12">
           <h5>to see more of my projects you can go to <a target="_blank" href="https://maurowernly.github.io/">maurowernly.github.io</a> or click on the following icons:</h5>
         </div>
-          <div class="col-12 col-md-6">
+          <div class="col-6">
               <a target="_blank" href="https://maurowernly.github.io/Pokedex/" class="d-block pkm-icon">
                   <img src="../../public/assets/images/stars.svg" alt="Sparkling stars" class="stars-pokedex">
                   <img src="../../public/assets/images/closed-pokedex.svg" alt="Closed Pokedex" class="closed-pokedex">
                   <img src="../../public/assets/images/open-pokedex.svg" alt="Closed Pokedex" class="open-pokedex">
               </a>
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-6">
               <a target="_blank" href="#" class="d-block pkm-icon">
                   <img src="../../public/assets/images/pokeball-closed.svg" alt="Closed Pokéball" class="pokeball-closed">
                   <img src="../../public/assets/images/pokeball-open.svg" alt="Closed Pokéball" class="pokeball-open">
@@ -138,6 +138,7 @@ a {
     line-height: 36px;
     text-align: center;
     margin-top: 60px;
+    background-color: #f6f6f6;
     border: 1px solid black;
     border-left: transparent;
     border-top: transparent;
@@ -165,6 +166,7 @@ a {
 
 .character-card{
   display: inline-block;
+  background-color: white;
   border: 1px solid black;
   margin: 20px 50px;
   min-width: 270px;
@@ -197,6 +199,10 @@ a {
   color: white;
 }
 
+.modal-header button{
+  color: white;
+}
+
 .current-character-title{
   text-align: center !important;
 }
@@ -208,7 +214,7 @@ img.current-haracter-image{
 
 .quote-character{
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-top: 40px;
   font-size: 19px;
 }
@@ -265,7 +271,7 @@ div.ff7 *{
   color: white;
   text-shadow: 2px 2px #212421,
                1px 1px #212021;
-  font-family: Verdana, sans-serif;
+  font-family: 'VT323', monospace;
   font-size: 17px;
   display: block;
   font-weight: normal;
