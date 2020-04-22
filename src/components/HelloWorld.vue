@@ -214,8 +214,8 @@ img.current-haracter-image{
 
 .quote-character{
   color: white;
-  margin-bottom: 10px;
-  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-top: 10px;
   font-size: 19px;
 }
 
