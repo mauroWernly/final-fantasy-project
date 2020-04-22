@@ -29,4 +29,11 @@ export default {
 img.ff-logo{
   max-width: 500px;
 }
+
+@media(max-width: 768px){
+  img.ff-logo{
+    max-height: 100px;
+    width: auto;
+  }
+}
 </style>
