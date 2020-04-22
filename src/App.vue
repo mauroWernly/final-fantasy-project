@@ -1,7 +1,7 @@
-<template>
+  <template>
   <div id="app">
     <img width="500" height="168" alt="Final fantasy logo" class="ff-logo" src="../public/assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Welcome my Final Fantasy app made with Vue.js"/>
   </div>
 </template>
 
