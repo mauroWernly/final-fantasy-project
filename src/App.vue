@@ -26,6 +26,10 @@ export default {
   margin-top: 30px;
 }
 
+body {
+  background-color: #f6f6f6 !important;
+}
+
 img.ff-logo{
   max-width: 500px;
 }

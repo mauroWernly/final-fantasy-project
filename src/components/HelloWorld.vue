@@ -11,6 +11,28 @@
       </div>
     </div>
 
+
+    <div class="container icon-container">
+      <div class="row text-center align-items-center icon-row">
+        <div class="col-12">
+          <h5>to see more of my projects you can go to <a target="_blank" href="https://maurowernly.github.io/">maurowernly.github.io</a> or click on the following icons:</h5>
+        </div>
+          <div class="col-12 col-md-6">
+              <a target="_blank" href="https://maurowernly.github.io/Pokedex/" class="d-block pkm-icon">
+                  <img src="../../public/assets/images/stars.svg" alt="Sparkling stars" class="stars-pokedex">
+                  <img src="../../public/assets/images/closed-pokedex.svg" alt="Closed Pokedex" class="closed-pokedex">
+                  <img src="../../public/assets/images/open-pokedex.svg" alt="Closed Pokedex" class="open-pokedex">
+              </a>
+          </div>
+          <div class="col-12 col-md-6">
+              <a target="_blank" href="#" class="d-block pkm-icon">
+                  <img src="../../public/assets/images/pokeball-closed.svg" alt="Closed Pokéball" class="pokeball-closed">
+                  <img src="../../public/assets/images/pokeball-open.svg" alt="Closed Pokéball" class="pokeball-open">
+              </a>
+          </div>
+      </div>
+    </div>
+
     <div class="modal fade" id="single-character-modal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content ff7-bg">
@@ -146,13 +168,15 @@ a {
   border: 1px solid black;
   margin: 20px 50px;
   min-width: 270px;
-  box-shadow: 0px 0px 45px 10px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: visible;
+  cursor: pointer;
 }
 
 .character-image{
   max-height: 200px;
   width: auto;
-  padding-bottom: 10px;
 }
 
 .modal-dialog{
@@ -267,5 +291,133 @@ div.ff7 *{
   margin-top: 50px;
   background-color: white;
   border-radius: 7px;
+}
+
+.icon-row{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.icon-row h5{
+  margin-bottom: 100px;
+}
+
+.icon-row a{
+  color: black;
+  text-decoration: underline;
+}
+
+.icon-row a:hover,
+.icon-row a:focus{
+  text-decoration: none;
+  color: black;
+}
+
+a.pkm-icon{
+    text-decoration: none;
+    color: transparent;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px){
+    a.pkm-icon{
+        transform: scale(.6);
+    }
+}
+
+a .closed-pokedex{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    max-width: 80px;
+    transition: all .3s ease-in-out;
+    transform: translate(-50%, -50%);
+}
+
+a:hover .closed-pokedex,
+a:focus .closed-pokedex{
+    opacity: 0;
+    transform: translate(-100%, -50%);
+}
+
+a .open-pokedex{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 180px;
+    opacity: 0;
+    transition: all .15s ease-in-out;
+    transform: translate(0%, -50%);
+}
+
+a:hover .open-pokedex,
+a:focus .open-pokedex{
+    opacity: 1;
+    max-width: 135px;
+    transform: translate(-50%, -50%);
+}
+
+a .stars-pokedex{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: scale(.8) translate(-50%, -125%);
+    transform-origin: 50% 100%;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    max-width: 100px;
+}
+
+a:hover .stars-pokedex,
+a:focus .stars-pokedex{
+    transform: scale(1) translate(-50%, -125%);
+    opacity: 1;
+}
+
+a .pokeball-closed{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    max-width: 100px;
+    transform: translateX(-50%) rotate(0deg);
+    transition: all .2s ease-in-out;
+}
+
+@keyframes spin1 {
+    0% { transform: translateX(-50%) rotate(0deg);}
+    80% { transform: translateX(-50%) rotate(180deg);}
+    100% { 
+        opacity: 0;
+    }
+}
+
+a:hover img.pokeball-closed,
+a:focus img.pokeball-closed{
+    animation: spin1 .7s ease-in-out forwards;
+}
+
+
+a .pokeball-open{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    max-width: 160px;
+    transform: translateX(-50%);
+}
+
+@keyframes fade-in-pkm {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+a:hover .pokeball-open,
+a:focus .pokeball-open{
+    animation-delay: .7s;
+    animation: fade-in-pkm .8s ease-in-out forwards;
 }
 </style>
